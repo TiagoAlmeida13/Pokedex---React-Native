@@ -31,6 +31,7 @@ const Details = props => {
       <Text style={styles.text}>
         Ability: {details.abilities[0].ability.name}
       </Text>
+      <Text style={styles.text}>Evolutions: {details.evolutions}</Text>
       <Text style={styles.text}>Type: {details.types[0].type.name}</Text>
     </View>
   ) : (
