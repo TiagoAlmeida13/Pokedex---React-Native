@@ -25,13 +25,13 @@ const Details = props => {
           }.png`,
         }}
       />
+      <Text style={styles.text}>ID: {details.id}</Text>
       <Text style={styles.text}>Name: {details.name}</Text>
       <Text style={styles.text}>Height: {details.height}</Text>
       <Text style={styles.text}>Weight: {details.weight}</Text>
       <Text style={styles.text}>
         Ability: {details.abilities[0].ability.name}
       </Text>
-      <Text style={styles.text}>Evolutions: {details.evolutions}</Text>
       <Text style={styles.text}>Type: {details.types[0].type.name}</Text>
     </View>
   ) : (
@@ -45,12 +45,13 @@ export default Details;
 
 const styles = StyleSheet.create({
   image: {
-    width: 200,
-    height: 200,
+    width: 300,
+    height: 300,
   },
   text: {
-    fontSize: 22,
-    marginBottom: 15,
+    fontFamily: 'Arial',
+    fontSize: 24,
+    marginBottom: 5,
   },
   indicator: {
     flex: 1,

@@ -18,7 +18,7 @@ const Pokemons = props => {
   }, []);
 
   const fetchPokemons = () => {
-    fetch('https://pokeapi.co/api/v2/pokemon?limit=750')
+    fetch('https://pokeapi.co/api/v2/pokemon?limit=150')
       .then(response => response.json())
       .then(pokemons => setPokemons(pokemons.results));
   };
@@ -58,7 +58,7 @@ const Pokemons = props => {
                       }.png`,
                     }}
                   />
-                  <Text>{pokemon.name}</Text>
+                  <Text style={styles.text}>{pokemon.name}</Text>
                 </TouchableOpacity>
               );
             })}
@@ -76,7 +76,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    marginTop: 30,
+    marginTop: 50,
+    backgroundColor: '#d6d6d6',
   },
   card: {
     display: 'flex',
@@ -85,13 +86,15 @@ const styles = StyleSheet.create({
     borderBottomColor: 'black',
     marginHorizontal: 20,
     marginVertical: 10,
+    
   },
   searchCont: {
     position: 'absolute',
     marginBottom: 70,
-    left: '20%',
     zIndex: 1,
-    marginTop: 10,
+    backgroundColor: '#878787',
+    width: '100%',
+    height: 80
   },
   searchfeild: {
     height: 40,
@@ -100,5 +103,13 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     width: 250,
     borderRadius: 50,
+    marginLeft: '20%',
+    marginTop: 20,
+    backgroundColor: '#FFF'
   },
+  text: {
+      fontSize: 22,
+      fontFamily: 'Arial',
+      marginBottom: 10,
+  }
 });

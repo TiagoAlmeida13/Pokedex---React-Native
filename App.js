@@ -6,7 +6,7 @@ import Details from './Components/Details';
 
 const appNavigator = createStackNavigator(
   {
-    Home: {
+    Pokelist: {
       screen: Pokemons,
     },
     Details: {
@@ -14,7 +14,7 @@ const appNavigator = createStackNavigator(
     },
   },
   {
-    initialRouteName: 'Home',
+    initialRouteName: 'Pokelist',
   },
 );
 
